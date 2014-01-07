@@ -20,15 +20,7 @@ build-type:          Simple
 cabal-version:       >=1.8
 
 library
-  exposed-modules:     Data.Vect.Floating, 
-  		       Data.Vect.Floating.Base, 
-		       Data.Vect.Floating.Interpolate, 
-		       Data.Vect.Floating.GramSchmidt, 
-		       Data.Vect.Floating.Util.Projective, 
-		       Data.Vect.Floating.Util.Dim2				   
-		       Data.Vect.Floating.Util.Dim3, 
-		       Data.Vect.Floating.Util.Dim4, 
-		       Data.Vect.Floating.Util.Quaternion,
+  exposed-modules: Data.Vect.Floating, Data.Vect.Floating.Base, Data.Vect.Floating.Interpolate, Data.Vect.Floating.GramSchmidt, Data.Vect.Floating.Util.Projective, Data.Vect.Floating.Util.Dim2, Data.Vect.Floating.Util.Dim3, Data.Vect.Floating.Util.Dim4, Data.Vect.Floating.Util.Quaternion
 		       
   -- other-modules:       
   build-depends:       base ==4.6.*, random ==1.0.*
