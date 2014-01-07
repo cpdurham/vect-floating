@@ -2,14 +2,14 @@
 -- documentation, see http://haskell.org/cabal/users-guide/
 
 name:                vect-floating
-version:             0.1.0.0
+version:             0.1.0.1
 synopsis:            A low-dimensional linear algebra library, operating on the Floating typeclass
 description:         A low-dimensional (2, 3, 4 and Quaternions) linear algebra library, 
 		     with lots of useful functions. Forked from vect library at <http://hackage.haskell.org/package/vect>
 		     by Balazs Komuves in order to use Floating typeclass instead of Float, Double. 
 		     Will be compatible with accelerate in a future package. 
 		     Many thanks to Balazs Komuves.
-homepage:            http://github.com/cdurham/vect-floating
+homepage:            http://github.com/cpdurham/vect-floating
 license:             BSD3
 license-file:        LICENSE
 author:              Balazs Komuves, Charles Durham
