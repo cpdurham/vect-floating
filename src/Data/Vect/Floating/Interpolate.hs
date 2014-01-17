@@ -10,8 +10,6 @@ module Data.Vect.Floating.Interpolate where
 --------------------------------------------------------------------------------
 
 import Data.Vect.Floating.Base
-import Data.Vect.Floating.Util.Dim2 (sinCos',angle2')
-import Data.Vect.Floating.Util.Dim3 (rotate3')
 
 --------------------------------------------------------------------------------
 
@@ -28,29 +26,6 @@ instance Floating a => Interpolate a (Vec3 a) where interpolate t x y = x &+ t *
 instance Floating a => Interpolate a (Vec4 a) where interpolate t x y = x &+ t *& (y &- x)
 
 --------------------------------------------------------------------------------
-
-{-
-instance Interpolate Normal2 where
-  interpolate t nx ny = sinCos' $ ax + t*adiff where
-    ax = angle2' nx
-    ay = angle2' ny
-    adiff = helper (ay - ax)
-    helper d 
-      | d < -pi   = d + twopi
-      | d >  pi   = d - twopi
-      | otherwise = d
-    twopi = 2*pi
-    
-instance Interpolate Normal3 where 
-  interpolate t nx ny = 
-    if maxAngle < 0.001  -- more or less ad-hoc critical angle
-      then mkNormal $ interpolate t x y
-      else toNormalUnsafe $ rotate3' (t*maxAngle) (mkNormal axis) x where
-    x = fromNormal nx
-    y = fromNormal ny
-    axis = (x &^ y)
-    maxAngle = acos (x &. y)
--}        
 
 instance Floating a => Interpolate a (Normal2 a) where interpolate = slerp
 instance Floating a => Interpolate a (Normal3 a) where interpolate = slerp

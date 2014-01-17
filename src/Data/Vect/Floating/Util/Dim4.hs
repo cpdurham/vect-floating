@@ -3,7 +3,7 @@
 
 module Data.Vect.Floating.Util.Dim4 where
 
-import Data.Vect.Floating.Base
+import Data.Vect.Floating.Base hiding (angle)
 import Data.Vect.Floating.GramSchmidt
 
 structVec4 :: [a] -> [Vec4 a]

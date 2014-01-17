@@ -16,7 +16,7 @@ module Data.Vect.Floating.Util.Quaternion where
 
 import Data.Typeable
 
-import Data.Vect.Floating.Base
+import Data.Vect.Floating.Base hiding (angle)
 import Data.Vect.Floating.Interpolate
 
 import Foreign.Storable
@@ -203,7 +203,7 @@ rotU axis angle = rotU' (mkNormal axis) angle
 
 rotU' {- ' CPP is sensitive to primes -} :: Floating a => Normal3 a -> a -> U a
 rotU' axis angle = U (Vec4 c (x*s) (y*s) (z*s)) where
-  Vec3 x y z = fromNormal axis 
+  Vec3 x y z = fromNormal axis
   half = 0.5 * angle
   c = cos half
   s = sin half

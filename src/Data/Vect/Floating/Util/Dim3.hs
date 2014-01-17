@@ -1,6 +1,6 @@
 module Data.Vect.Floating.Util.Dim3 where
 
-import Data.Vect.Floating.Base
+import Data.Vect.Floating.Base hiding (angle)
 
 --------------------------------------------------------------------------------
 

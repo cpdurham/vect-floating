@@ -23,7 +23,6 @@ module Data.Vect.Floating.Base
   where
 
 import Data.Typeable
-import Control.Monad
 import System.Random  
 import Foreign
 

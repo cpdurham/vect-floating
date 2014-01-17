@@ -18,10 +18,8 @@
 
 module Data.Vect.Floating.Util.Projective where
 
-import Data.Vect.Floating.Base
+import Data.Vect.Floating.Base hiding (angle)
 import Data.Vect.Floating.Util.Dim3
-
-import qualified Data.Vect.Floating.Util.Dim4 as Dim4
 
 --------------------------------------------------------------------------------
 
