@@ -2,7 +2,7 @@
 -- documentation, see http://haskell.org/cabal/users-guide/
 
 name:                vect-floating
-version:             0.1.0.3
+version:             0.1.0.4
 synopsis:            A low-dimensional linear algebra library, operating on the Floating typeclass
 description:         A low-dimensional (2, 3, 4 and Quaternions) linear algebra library, 
 		     with lots of useful functions. Forked from vect library at <http://hackage.haskell.org/package/vect>
@@ -23,5 +23,5 @@ library
   exposed-modules:	Data.Vect.Floating, Data.Vect.Floating.Base, Data.Vect.Floating.Interpolate, Data.Vect.Floating.GramSchmidt, Data.Vect.Floating.Util.Projective, Data.Vect.Floating.Util.Dim2, Data.Vect.Floating.Util.Dim3, Data.Vect.Floating.Util.Dim4, Data.Vect.Floating.Util.Quaternion
 		       
   ghc-options: 	       -Wall -O2
-  build-depends:       base ==4.6.*, random ==1.0.*
+  build-depends:       base >= 3 && < 5, random ==1.0.*
   hs-source-dirs:      src
